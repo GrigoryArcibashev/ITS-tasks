@@ -23,6 +23,10 @@ function getParametersOfProgram() {
 		console.error('ОШИБКА!\nДолжны быть указаны пути к читаемому файлу и файлу для записи');
 		process.exit(-1);
 	}
+	if (pathToReadableFile == pathToWritableFile) {
+        	console.error('ОШИБКА!\nЧитается и записывается один и тот же файл');
+        	process.exit(-1);
+    	}
 
 	return new Array(operatingMode, pathToReadableFile, pathToWritableFile);
 }
