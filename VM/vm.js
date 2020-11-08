@@ -46,10 +46,6 @@ function runProgram(memory) {
                 memory[memory[ip + 3]] = memory[memory[ip + 1]] * memory[memory[ip + 2]];
                 ip += 4;
                 break;
-            case 'div':
-                memory[memory[ip + 3]] = memory[memory[ip + 1]] / memory[memory[ip + 2]];
-                ip += 4;
-                break;
             case 'cmp':
                 if (memory[memory[ip + 1]] == memory[memory[ip + 2]])
                     memory[memory[ip + 3]] = 0;
